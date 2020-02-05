@@ -25,7 +25,9 @@ SECRET_KEY = 'tzogfuc&#mc=*!el8b2cpzl6oat)mufxzj$e^z3e34!velj#rw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'pythongig.herokuapp.com'
+]
 
 
 # Application definition
