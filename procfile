@@ -1,1 +1,1 @@
-web: gunicorn DjangoApi.wsgi
+web: gunicorn manage:server DjangoApi.wsgi
