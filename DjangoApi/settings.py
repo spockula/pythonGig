@@ -26,7 +26,9 @@ SECRET_KEY = 'tzogfuc&#mc=*!el8b2cpzl6oat)mufxzj$e^z3e34!velj#rw'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'pythongig.herokuapp.com'
+    'pythongig.herokuapp.com',
+    'localhost',
+    'http://127.0.0.1:8000'
 ]
 
 
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'api',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +56,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
      'whitenoise.middleware.WhiteNoiseMiddleware',
+     'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'DjangoApi.urls'
 
@@ -179,4 +185,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'chinedukogu@gmail.com'
+EMAIL_HOST_PASSWORD = 'spockula101'
+EMAIL_PORT = 587
 
