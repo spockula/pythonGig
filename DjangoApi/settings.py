@@ -59,6 +59,11 @@ MIDDLEWARE = [
      'corsheaders.middleware.CorsMiddleware',
 ]
 
+MIDDLEWARE_CLASSES = (
+    #...
+    'api.CorsMiddleware' 
+)
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'DjangoApi.urls'
